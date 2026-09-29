@@ -1,0 +1,32 @@
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: f1telemetry_db
+    environment:
+      POSTGRES_USER: f1user
+      POSTGRES_PASSWORD: f1password
+      POSTGRES_DB: f1telemetry
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: f1telemetry_cache
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: f1telemetry_queue
+    ports:
+      - "5672:5672"   # Porta de comunicação da aplicação
+      - "15672:15672" # Porta do painel visual de gerenciamento
+    restart: unless-stopped
+
+volumes:
+  pgdata:

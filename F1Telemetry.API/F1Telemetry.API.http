@@ -1,0 +1,6 @@
+@F1Telemetry.API_HostAddress = http://localhost:5209
+
+GET {{F1Telemetry.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

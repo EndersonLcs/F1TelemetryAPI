@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1Telemetry.API", "F1Telemetry.API\F1Telemetry.API.csproj", "{1BE527D1-EF67-4028-86C4-C59317648C82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1Telemetry.Domain", "F1Telemetry.Domain\F1Telemetry.Domain.csproj", "{C2131B83-D57C-459B-9BC4-16F5F98ABB17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1Telemetry.Application", "F1Telemetry.Application\F1Telemetry.Application.csproj", "{29163CF4-9800-4F17-9D2C-24BA647E08FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1Telemetry.Infrastructure", "F1Telemetry.Infrastructure\F1Telemetry.Infrastructure.csproj", "{F98F408F-F778-425F-8BB1-B12E6238C9CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1Telemetry.Tests", "F1Telemetry.Tests\F1Telemetry.Tests.csproj", "{8099DC7A-8368-4253-A0E7-9DDA5EA0CFFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1Telemetry.IngestionWorker", "F1Telemetry.IngestionWorker\F1Telemetry.IngestionWorker.csproj", "{F11605E8-E5DC-4C4B-A89A-A2C00C2CE8F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BE527D1-EF67-4028-86C4-C59317648C82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE527D1-EF67-4028-86C4-C59317648C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE527D1-EF67-4028-86C4-C59317648C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE527D1-EF67-4028-86C4-C59317648C82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2131B83-D57C-459B-9BC4-16F5F98ABB17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2131B83-D57C-459B-9BC4-16F5F98ABB17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2131B83-D57C-459B-9BC4-16F5F98ABB17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2131B83-D57C-459B-9BC4-16F5F98ABB17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29163CF4-9800-4F17-9D2C-24BA647E08FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29163CF4-9800-4F17-9D2C-24BA647E08FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29163CF4-9800-4F17-9D2C-24BA647E08FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29163CF4-9800-4F17-9D2C-24BA647E08FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F98F408F-F778-425F-8BB1-B12E6238C9CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F98F408F-F778-425F-8BB1-B12E6238C9CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F98F408F-F778-425F-8BB1-B12E6238C9CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F98F408F-F778-425F-8BB1-B12E6238C9CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8099DC7A-8368-4253-A0E7-9DDA5EA0CFFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8099DC7A-8368-4253-A0E7-9DDA5EA0CFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8099DC7A-8368-4253-A0E7-9DDA5EA0CFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8099DC7A-8368-4253-A0E7-9DDA5EA0CFFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F11605E8-E5DC-4C4B-A89A-A2C00C2CE8F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F11605E8-E5DC-4C4B-A89A-A2C00C2CE8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F11605E8-E5DC-4C4B-A89A-A2C00C2CE8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F11605E8-E5DC-4C4B-A89A-A2C00C2CE8F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

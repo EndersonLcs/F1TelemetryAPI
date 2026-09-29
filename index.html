@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>F1 Pit Wall - Live</title>
+    <!-- Importa a biblioteca do SignalR via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+</head>
+<body style="background-color: #111; color: #fff; font-family: monospace;">
+    <h2>🏁 F1 Live Telemetry</h2>
+    <ul id="lapsList"></ul>
+
+    <script>
+        // Conecta no Hub da nossa API (ajuste a porta 5000 se a sua API estiver usando outra, como 5214)
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("http://localhost:5209/hubs/telemetry")
+            .build();
+
+        // Escuta o evento "ReceiveNewLap" que configuramos no C#
+        connection.on("ReceiveNewLap", function (lapData) {
+            const li = document.createElement("li");
+            li.textContent = `[AO VIVO] Piloto ${lapData.driverNumber} completou a volta ${lapData.lapNumber} em ${lapData.lapDurationMs}ms!`;
+            li.style.color = "#00ff00"; // Verde estilo Matrix/Pit Wall
+            
+            // Adiciona no topo da lista
+            const list = document.getElementById("lapsList");
+            list.insertBefore(li, list.firstChild);
+        });
+
+        // Inicia a conexão
+        connection.start().then(function () {
+            console.log("Conectado ao Pit Wall!");
+        }).catch(function (err) {
+            return console.error(err.toString());
+        });
+    </script>
+</body>
+</html>
