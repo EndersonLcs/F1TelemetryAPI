@@ -1,0 +1,45 @@
+.timing-board {
+  margin-top: 20px;
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  th {
+    color: #888;
+    border-bottom: 1px solid #333;
+    padding: 12px 10px;
+  }
+
+  td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  // Estilização das colunas
+  .driver-col { font-weight: bold; color: #fff; font-size: 1.2em; }
+  .time-col { color: #00ff00; font-weight: bold; }
+
+  // Cores dinâmicas para os pneus
+  .tire-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+    
+    // Classes que o [ngClass] vai injetar
+    &.soft { background-color: #ff3333; color: white; }
+    &.medium { background-color: #ffff33; }
+    &.hard { background-color: #ffffff; }
+    &.intermediate { background-color: #33cc33; color: white; }
+    &.wet { background-color: #3366ff; color: white; }
+  }
+}
