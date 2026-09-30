@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="8.11.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.10" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
     <PackageReference Include="Moq" Version="4.21.0" />
     <PackageReference Include="Testcontainers.PostgreSql" Version="4.15.0" />
@@ -28,8 +28,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\F1Telemetry.API\F1Telemetry.API.csproj" />
-    <ProjectReference Include="..\F1Telemetry.Domain\F1Telemetry.Domain.csproj" />
-    <ProjectReference Include="..\F1Telemetry.Infrastructure\F1Telemetry.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

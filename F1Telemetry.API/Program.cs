@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using F1Telemetry.Domain.Interfaces;
 using F1Telemetry.Infrastructure.Repositories;
 using F1Telemetry.API.Services;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +21,12 @@ builder.Services.AddStackExchangeRedisCache(options =>
 builder.Services.AddScoped<ILapTimeRepository, LapTimeRepository>();
 
 // Adiciona os controllers e Swagger
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    });
+
 builder.Services.AddSignalR();
 
 // Configuração do CORS para permitir o Front-end (Live Server) conversar com o SignalR
@@ -57,3 +63,6 @@ app.MapControllers();
 app.MapHub<F1Telemetry.API.Hubs.F1TelemetryHub>("/hubs/telemetry");
 
 app.Run();
+
+// Expõe a classe Program para o projeto de testes de integração
+public partial class Program { }

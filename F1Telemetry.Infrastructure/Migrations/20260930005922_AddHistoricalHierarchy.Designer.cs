@@ -3,6 +3,7 @@ using System;
 using F1Telemetry.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace F1Telemetry.Infrastructure.Migrations
 {
     [DbContext(typeof(F1TelemetryDbContext))]
-    partial class F1TelemetryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260930005922_AddHistoricalHierarchy")]
+    partial class AddHistoricalHierarchy
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
